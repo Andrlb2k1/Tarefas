@@ -4,7 +4,7 @@ import Todo from './components/Todo'
 
 function App() {
 
-  const {todos, setTodos} = useState([
+  const [todos, setTodos] = useState([
     {
       id: 1,
       text: 'Criar funcionalidade X no sistema',
@@ -30,7 +30,7 @@ function App() {
       <h1>Lista de Tarefas</h1>
       <div className="todo-list">
         {todos.map((todo) => (
-          <Todo todo={todo}/>
+          <Todo todo={todo} />
         ))}
       </div>
     </div>
