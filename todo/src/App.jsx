@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Todo from './components/Todo'
+import TodoForm from './components/TodoForm'
 
 function App() {
 
@@ -30,9 +31,10 @@ function App() {
       <h1>Lista de Tarefas</h1>
       <div className="todo-list">
         {todos.map((todo) => (
-          <Todo todo={todo} />
+          <Todo key={todo.id} todo={todo} />
         ))}
       </div>
+      <TodoForm />
     </div>
   )
 }
